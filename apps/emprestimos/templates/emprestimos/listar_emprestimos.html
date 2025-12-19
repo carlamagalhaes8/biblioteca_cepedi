@@ -46,10 +46,10 @@
                             <td>{{ e.data_devolucao | date:'d/m/Y'}}</td>
                             <td>{{ e.data_prevista_devolucao  | date:'d/m/Y'}}</td>
 
-                            {% if status == E %}
-                                <td><span class="badge badge-danger">{{ e.get_status_display }}</span></td>
+                            {% if e.get_status_display == "Devolvido" %}
+                                <td><span class="badge badge-success">{{ e.get_status_display }}</span></td>
                             {% else %}
-                                <td><span class="badge badge-sucess">{{ e.get_status_display }}</span></td>
+                                <td><span class="badge badge-danger">{{ e.get_status_display }}</span></td>
                             {% endif %}
 
                             <td>
